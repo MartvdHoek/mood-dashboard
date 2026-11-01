@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Soundtrack</title>
+  <meta name="description" content="Kies je vibe, start je werk.">
+  <meta name="theme-color" content="#F6F3EE">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:ital,opsz,wght@1,9..144,600..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <h1 class="brand">Soundtrack <span>kies je vibe, start je werk</span></h1>
+      <div class="top-actions">
+        <button class="chip" id="suggestChip" type="button">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Voorstel<span class="hide-sm"> voor nu</span>: <strong id="suggestName">…</strong></span>
+        </button>
+        <div class="feel-wrap">
+          <button class="btn-dark" id="feelBtn" type="button" aria-expanded="false" aria-controls="feelPop">Hoe voel ik me?</button>
+          <div class="feel-pop" id="feelPop" hidden>
+            <p class="feel-q">Hoe voel je je nu?</p>
+            <div class="feel-options" id="feelOptions"></div>
+            <p class="feel-result" id="feelResult" hidden></p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="now is-idle" id="now" aria-live="polite">
+      <div class="now-word" id="nowWord" aria-hidden="true">PLAY</div>
+      <div class="now-info">
+        <p class="now-label">Nu speelt</p>
+        <h2 class="now-name" id="nowName">Kies een mood</h2>
+        <p class="now-sub" id="nowSub">Eén klik op een tile en het speelt.</p>
+        <p class="now-meta" id="nowMeta"></p>
+        <p class="now-notice" id="nowNotice" hidden></p>
+        <div class="controls">
+          <button class="ctl ctl-play" id="btnPlay" type="button" aria-label="Afspelen" title="Afspelen / pauze (spatie)" disabled>
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h3.5v16H7zM13.5 4H17v16h-3.5z"/></svg>
+          </button>
+          <button class="ctl ctl-text" id="btnNext" type="button" title="Volgende mix (N)" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14l10-7zM17 5h2v14h-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            Volgende mix
+          </button>
+          <button class="ctl ctl-text" id="btnSkip" type="button" title="10 minuten vooruit" disabled>+10 min</button>
+          <button class="ctl ctl-round" id="btnUp" type="button" aria-label="Duim omhoog" aria-pressed="false" title="Vind ik goed" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v10H4V10zM7 10l4-7c1.7 0 2.6 1.2 2.2 2.8L12.5 9H19a2 2 0 0 1 2 2.3l-1.2 7A2 2 0 0 1 17.8 20H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="ctl ctl-round" id="btnDown" type="button" aria-label="Duim omlaag" aria-pressed="false" title="Minder vaak" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 14V4h3v10zM17 14l-4 7c-1.7 0-2.6-1.2-2.2-2.8l.7-3.2H5a2 2 0 0 1-2-2.3l1.2-7A2 2 0 0 1 6.2 4H17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="now-player">
+        <div class="player-frame">
+          <div id="player"></div>
+          <div class="player-empty" id="playerEmpty">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>
+            <span>YouTube-speler</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="moods">
+      <div class="section-head">
+        <h2>Moods</h2>
+        <span class="muted">Eén klik en je zit erin</span>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="day card">
+      <div class="section-head">
+        <h3>Je dag in muziek</h3>
+        <span class="muted" id="dayTotal"></span>
+      </div>
+      <div class="timeline" id="timeline"></div>
+      <div class="ticks" id="ticks"></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="moods.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
