@@ -431,6 +431,10 @@ button:disabled { cursor: default; }
 .ticks span:last-child { transform: translateX(-100%); }
 .day-empty { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
 
+.foot { margin: 20px 0 0; text-align: center; font-size: 14px; }
+.foot a { color: var(--muted); }
+.foot a:hover { color: var(--ink); }
+
 /* ---------- toast ---------- */
 .toast {
   position: fixed;

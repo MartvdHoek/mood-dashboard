@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Proefkamer · Soundtrack</title>
+  <meta name="theme-color" content="#F6F3EE">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:ital,opsz,wght@0,9..144,600..800;1,9..144,600..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .back { color: var(--muted); font-size: 15px; text-decoration: none; }
+    .back:hover { color: var(--ink); }
+    .intro { margin: -8px 0 20px; color: var(--muted); max-width: 640px; }
+
+    .stage {
+      position: sticky; top: 0; z-index: 10;
+      display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 20px; align-items: center;
+      padding: 14px; margin: 0 -14px 20px;
+      background: var(--page);
+    }
+    .stage .player-frame { background: #17130C; color: #F6F3EE; }
+    .stage-info p { margin: 0; }
+    .stage-title { font-weight: 700; font-size: 18px; }
+    .stage-sub { color: var(--muted); font-size: 14px; margin-top: 2px !important; }
+    .stage-ctl { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .pill {
+      padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px;
+      background: var(--card); font-size: 14px;
+    }
+    .pill:hover:not(:disabled) { border-color: var(--ink); }
+    .pill:disabled { opacity: .4; }
+
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+    .tab {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px; border: 1.5px solid var(--line); border-radius: 999px;
+      background: var(--card); font-size: 15px;
+    }
+    .tab .sw { width: 12px; height: 12px; border-radius: 50%; }
+    .tab .count { color: var(--muted); font-size: 13px; }
+    .tab[aria-selected="true"] { border-color: var(--ink); background: var(--ink); color: var(--page); }
+    .tab[aria-selected="true"] .count { color: #BDB5A8; }
+
+    .vibe { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; align-items: start; }
+    .vibe-side .tile { width: 100%; cursor: default; }
+    .vibe-side .tile:hover { transform: none; box-shadow: none; }
+    .badge-new {
+      display: inline-block; margin: 14px 0 6px; padding: 3px 10px; border-radius: 999px;
+      background: #E8692A; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .04em;
+    }
+    .want { display: flex; gap: 8px; margin-top: 4px; }
+    .q { margin: 16px 0 8px; font-weight: 600; }
+    .note {
+      width: 100%; min-height: 90px; padding: 10px 12px; border: 1px solid var(--line);
+      border-radius: 14px; background: var(--card); font: inherit; font-size: 14px; resize: vertical;
+    }
+
+    .cands { display: flex; flex-direction: column; gap: 10px; }
+    .cand {
+      display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center;
+      padding: 12px 14px; border-radius: 18px; background: var(--card);
+      border: 2px solid transparent;
+    }
+    .cand.is-playing { border-color: var(--ink); }
+    .cand.is-yes { background: #EEF8DA; }
+    .cand.is-no { opacity: .55; }
+    .cand-play {
+      width: 44px; height: 44px; border-radius: 50%; border: 0;
+      background: var(--ink); color: var(--page); display: grid; place-items: center;
+    }
+    .cand-play svg { width: 18px; height: 18px; fill: currentColor; }
+    .cand-title { font-weight: 600; overflow-wrap: anywhere; }
+    .cand-meta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .tag-in { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: #EEE8DF; color: var(--ink); font-size: 12px; }
+    .verdict { display: flex; gap: 6px; }
+    .verdict button {
+      padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--page); font-size: 14px;
+      white-space: nowrap;
+    }
+    .verdict button[aria-pressed="true"].yes { background: #2F7D32; border-color: #2F7D32; color: #fff; }
+    .verdict button[aria-pressed="true"].no { background: #9B2C2C; border-color: #9B2C2C; color: #fff; }
+    .want button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--page); }
+
+    .result { margin-top: 36px; }
+    .result textarea {
+      width: 100%; min-height: 160px; padding: 12px; border: 1px solid var(--line); border-radius: 14px;
+      font: 13px/1.5 'Space Mono', ui-monospace, monospace; background: var(--page);
+    }
+    .result-actions { display: flex; gap: 8px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+
+    @media (max-width: 860px) {
+      .stage { position: static; grid-template-columns: 1fr; gap: 10px; }
+      .vibe { grid-template-columns: 1fr; }
+      .vibe-side .tile { min-height: 140px; }
+      .cand { grid-template-columns: auto minmax(0, 1fr); }
+      .verdict { grid-column: 1 / -1; }
+      .verdict button { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <h1 class="brand">Proefkamer <span>luister, keur, kies</span></h1>
+      <a class="back" href="./">← Terug naar Soundtrack</a>
+    </header>
+    <p class="intro">Kies een vibe, luister een stukje van elke mix (hij start na een paar minuten, voorbij het intro) en geef aan of het past. Typ erbij wat je mist. Klaar? Kopieer onderaan je resultaat en plak het in de chat met Claude.</p>
+
+    <div class="stage">
+      <div class="player-frame">
+        <div id="player"></div>
+        <div class="player-empty" id="playerEmpty">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>
+          <span>Kies een mix om te proeven</span>
+        </div>
+      </div>
+      <div class="stage-info">
+        <p class="stage-title" id="stageTitle">Nog niks aan het proeven</p>
+        <p class="stage-sub" id="stageSub">Druk op ▶ bij een mix hieronder.</p>
+        <div class="stage-ctl">
+          <button class="pill" id="btnToggle" type="button" disabled>Pauze</button>
+          <button class="pill" id="btnSkip" type="button" disabled>+10 min</button>
+          <button class="pill" id="btnNextTrack" type="button" disabled>Volgend nummer</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <section class="vibe" id="vibe"></section>
+
+    <section class="result card">
+      <div class="section-head">
+        <h3>Je resultaat</h3>
+        <span class="muted" id="resultCount"></span>
+      </div>
+      <textarea id="resultText" readonly></textarea>
+      <div class="result-actions">
+        <button class="btn-dark" id="btnCopy" type="button">Kopieer resultaat</button>
+        <button class="pill" id="btnReset" type="button">Alles wissen</button>
+        <span class="muted" id="copyMsg"></span>
+      </div>
+    </section>
+  </div>
+
+  <script src="moods.js"></script>
+  <script src="kandidaten.js"></script>
+  <script src="proef.js"></script>
+</body>
+</html>

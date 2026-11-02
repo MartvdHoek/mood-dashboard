@@ -81,9 +81,9 @@ window.MOODS = [
       deco: "bubbles"
     },
     sources: [
-      // Placeholders: vervang door je eigen aero-mixen
-      { url: "https://www.youtube.com/watch?v=jfKfPfyJRdk", title: "lofi hip hop radio (placeholder)" },
-      { url: "https://www.youtube.com/live/28KRPhVzCus", title: "Lofi livestream (placeholder)" }
+      { url: "https://www.youtube.com/watch?v=lCuS4oFKBtM", title: "Frutiger Aero Music Playlist Mix (7 uur)" },
+      { url: "https://www.youtube.com/watch?v=J_BwEIjCGHc", title: "Frutiger Aero: Complete Music Mix" },
+      { url: "https://www.youtube.com/watch?v=Cz2YCRmDOFk", title: "wake up! it's 2000s again" }
     ]
   },
   {
@@ -123,8 +123,9 @@ window.MOODS = [
       deco: "cloud"
     },
     sources: [
-      { url: "https://www.youtube.com/watch?v=rUxyKA_-grg", title: "lofi sleep radio (placeholder)" },
-      { url: "https://www.youtube.com/watch?v=jfKfPfyJRdk", title: "lofi hip hop radio (placeholder)" }
+      { url: "https://www.youtube.com/watch?v=sxC3Fg98AKE", title: "music to make your brain shut up" },
+      { url: "https://www.youtube.com/watch?v=pZ6V8pH4HPY", title: "Brian Eno – Thursday Afternoon" },
+      { url: "https://www.youtube.com/watch?v=lTRiuFIWV54", title: "Lofi Girl – 1 A.M Study Session" }
     ]
   },
 
