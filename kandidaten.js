@@ -22,8 +22,8 @@ window.PROEF = [
     mood: "go-getter",
     question: "Hard en donker (hard techno), melodisch en opbouwend, of groovy (tech house, Fred again)? Vocals erbij of liever niet?",
     candidates: [
-      { id: "t3dIgXOIuko", title: "Novah – Boiler Room x Teletech London (hard techno)", channel: "Boiler Room", mins: 60 },
-      { id: "EIQlDpgAY5Y", title: "Sara Landry – Boiler Room x Teletech 2023 (hard techno)", channel: "Boiler Room", mins: 60 },
+      { id: "t3dIgXOIuko", title: "Novah – Boiler Room x Teletech London (hard techno)", channel: "Boiler Room", mins: 60, inMoods: true },
+      { id: "EIQlDpgAY5Y", title: "Sara Landry – Boiler Room x Teletech 2023 (hard techno)", channel: "Boiler Room", mins: 60, inMoods: true },
       { id: "Q_tJnC0vpn4", title: "Hardgroove techno set in a bunker", channel: "Joanna Kuchta", mins: 42 },
       { id: "b014UNvEOsQ", title: "Melodic techno & peak time DJ-mix @ Gravity", channel: "YOUNA", mins: 86 },
       { id: "XJktaXYRWBg", title: "Melodic techno & progressive house – Argy, Monolink, Omnia", channel: "Raf Fender", mins: 100 },
@@ -78,16 +78,8 @@ window.PROEF = [
     ]
   },
 
-  // ---------- voorstellen voor nieuwe moods ----------
   {
     mood: "remix",
-    name: "Remix",
-    subtitle: "Bekende nummers, sneller en harder",
-    style: {
-      bg: "#FF5A1F", fg: "#1A0B05", tag: "#FF5A1F",
-      font: "'Anton', Impact, sans-serif", weight: 400, italic: false,
-      word: "REMIX", deco: "bpm"
-    },
     question: "Welk tempo: house en tech house, techno, of echt hard (hardstyle, drum & bass)? Hits van nu of klassiekers uit de 90s en 2000s?",
     candidates: [
       { id: "56l3OrgK-SU", title: "Tech house remixes & mashups of popular songs", channel: "Darley Jefferson", mins: 96 },
@@ -97,7 +89,7 @@ window.PROEF = [
       { id: "JA86AFp0gbI", title: "Techno remixes of popular songs – only techno bangers", channel: "BrutishHeavyMusic", mins: 73 },
       { id: "gIWjzcD_flU", title: "Techno remixes & mashups of popular songs", channel: "Darley Jefferson", mins: 136 },
       { id: "uPAOIsIT1MA", title: "Drum & bass remixes of popular songs", channel: "PAIGE67", mins: 59 },
-      { id: "BofXJY3WUDs", title: "Hardstyle remixes of popular songs – 2 uur", channel: "Tezpa In The Mix!", mins: 126 }
+      { id: "BofXJY3WUDs", title: "Hardstyle remixes of popular songs – 2 uur", channel: "Tezpa In The Mix!", mins: 126, inMoods: true }
     ]
   }
 ];

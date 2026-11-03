@@ -69,7 +69,9 @@ window.MOODS = [
     },
     sources: [
       { url: "https://www.youtube.com/watch?v=0vsD8kO8xeM", title: "1 uur dark techno" },
-      { url: "https://www.youtube.com/watch?v=c0-hvjV2A5Y", title: "Fred again.. Boiler Room London" }
+      { url: "https://www.youtube.com/watch?v=c0-hvjV2A5Y", title: "Fred again.. Boiler Room London" },
+      { url: "https://www.youtube.com/watch?v=t3dIgXOIuko", title: "Novah – Boiler Room x Teletech London" },
+      { url: "https://www.youtube.com/watch?v=EIQlDpgAY5Y", title: "Sara Landry – Boiler Room x Teletech 2023" }
     ]
   },
   {
@@ -160,6 +162,25 @@ window.MOODS = [
       { url: "https://www.youtube.com/watch?v=f7jZoHs3QfY", title: "Funky city pop & Braziliaanse klassiekers (vinyl)" },
       { url: "https://www.youtube.com/watch?v=WCCovrKvAtU", title: "80s Japanese city pop playlist" },
       { url: "https://www.youtube.com/playlist?list=PLgf-8GQFjABq2XqYIaYD4C_uIZ4jLL4x-", title: "City pop (Japanese 80s) (playlist)" }
+    ]
+  },
+  {
+    id: "remix",
+    name: "Remix",
+    subtitle: "Bekende nummers, sneller en harder",
+    featured: true,
+    style: {
+      bg: "#FF5A1F",
+      fg: "#1A0B05",
+      tag: "#FF5A1F",
+      font: "'Anton', Impact, sans-serif",
+      weight: 400,
+      italic: false,
+      word: "REMIX",
+      deco: "bpm"
+    },
+    sources: [
+      { url: "https://www.youtube.com/watch?v=BofXJY3WUDs", title: "Hardstyle remixes of popular songs – 2 uur" }
     ]
   },
 
