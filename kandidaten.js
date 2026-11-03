@@ -77,19 +77,22 @@ window.PROEF = [
       { id: "PLgf-8GQFjABq2XqYIaYD4C_uIZ4jLL4x-", title: "City pop (Japanese 80s)", channel: "playlist", tracks: 44, inMoods: true }
     ]
   },
-
   {
     mood: "remix",
-    question: "Welk tempo: house en tech house, techno, of echt hard (hardstyle, drum & bass)? Hits van nu of klassiekers uit de 90s en 2000s?",
+    question: "Euforisch hardstyle (meezingen) of rauw (rawstyle)? En uptempo: knallen op 200 BPM, of liever frenchcore met bekende nummers erin?",
     candidates: [
-      { id: "56l3OrgK-SU", title: "Tech house remixes & mashups of popular songs", channel: "Darley Jefferson", mins: 96 },
-      { id: "r9P08bbllno", title: "Party mix – remixes & mashups of popular songs", channel: "TOBI", mins: 76 },
-      { id: "YsmcZQAHLyI", title: "90s & 2000s classics reborn – modern remix mix", channel: "Mixterious", mins: 84 },
-      { id: "hctq5FQtp_s", title: "Afro house EDM remixes – Avicii, Swedish House Mafia, Mau P", channel: "DJ NEXYS", mins: 36 },
-      { id: "JA86AFp0gbI", title: "Techno remixes of popular songs – only techno bangers", channel: "BrutishHeavyMusic", mins: 73 },
-      { id: "gIWjzcD_flU", title: "Techno remixes & mashups of popular songs", channel: "Darley Jefferson", mins: 136 },
-      { id: "uPAOIsIT1MA", title: "Drum & bass remixes of popular songs", channel: "PAIGE67", mins: 59 },
-      { id: "BofXJY3WUDs", title: "Hardstyle remixes of popular songs – 2 uur", channel: "Tezpa In The Mix!", mins: 126, inMoods: true }
+      { id: "BofXJY3WUDs", title: "Hardstyle remixes of popular songs – 2 uur", channel: "Tezpa In The Mix!", mins: 126, inMoods: true },
+      { id: "UW4r0ym65Es", title: "Best hardstyle remixes of popular songs 2023", channel: "DJEkkiMusic", mins: 86 },
+      { id: "q3Hz3gXJ61Y", title: "Hardstyle remixes of popular songs (2017 update)", channel: "HarmonyX", mins: 121 },
+      { id: "OkVZ8aBoK4g", title: "Euphoric hardstyle – remixes of popular songs 2026", channel: "Harder Soundz", mins: 64 },
+      { id: "-oK2U3B3HNg", title: "Hardstyle & rawstyle remixes & mashups of popular songs", channel: "Darley Jefferson", mins: 107 },
+      { id: "cLLD3kjO0tw", title: "Hardstyle remixes that broke the internet (hardstyle & hardcore)", channel: "dnl Chore", mins: 70 },
+      { id: "uU7JGer2HyM", title: "Frenchcore mix of popular songs", channel: "Au Au Au", mins: 29 },
+      { id: "2QGfs4V0hko", title: "Uptempo hardcore 2024 mix", channel: "Jehuty Hardcore", mins: 72 },
+      { id: "rSEdNujT0ik", title: "Uptempo mix september 2026", channel: "MadZON Uptempo", mins: 70 },
+      { id: "iwSyT1so1EA", title: "Uptempo & terror mix 2026 #85", channel: "Avanity", mins: 69 },
+      { id: "JvpMble0tuA", title: "Partyraiser vs. Dr. Peacock @ Masters of Hardcore 2018", channel: "Masters of Hardcore", mins: 47 },
+      { id: "d6fVHCd9SBs", title: "The ultimate uptempo hardcore yearmix 2025", channel: "KRIMINAL", mins: 201 }
     ]
   }
 ];
