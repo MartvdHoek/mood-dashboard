@@ -19,6 +19,21 @@ window.PROEF = [
     ]
   },
   {
+    mood: "go-getter",
+    question: "Hard en donker (hard techno), melodisch en opbouwend, of groovy (tech house, Fred again)? Vocals erbij of liever niet?",
+    candidates: [
+      { id: "t3dIgXOIuko", title: "Novah – Boiler Room x Teletech London (hard techno)", channel: "Boiler Room", mins: 60 },
+      { id: "EIQlDpgAY5Y", title: "Sara Landry – Boiler Room x Teletech 2023 (hard techno)", channel: "Boiler Room", mins: 60 },
+      { id: "Q_tJnC0vpn4", title: "Hardgroove techno set in a bunker", channel: "Joanna Kuchta", mins: 42 },
+      { id: "b014UNvEOsQ", title: "Melodic techno & peak time DJ-mix @ Gravity", channel: "YOUNA", mins: 86 },
+      { id: "XJktaXYRWBg", title: "Melodic techno & progressive house – Argy, Monolink, Omnia", channel: "Raf Fender", mins: 100 },
+      { id: "6MAzUT1YhWE", title: "Fred again.. – Rooftop Live (Arun's Roof, London)", channel: "Fred again..", mins: 102 },
+      { id: "42XFNGZrpaQ", title: "Chris Stussy – Boiler Room Edinburgh (tech house)", channel: "Boiler Room", mins: 75 },
+      { id: "JUDUC87VuPU", title: "KETTAMA – Boiler Room London (UK house, breaks)", channel: "Boiler Room", mins: 57 },
+      { id: "T3YfZsDQUp0", title: "Hyperfocus techno – 3 uur pomodoro (50/10)", channel: "Work With Paul", mins: 172 }
+    ]
+  },
+  {
     mood: "disco-80s",
     question: "Meer echte disco (Chic, Donna Summer), Italo disco, of 80s synthpop en hits?",
     candidates: [
@@ -60,6 +75,29 @@ window.PROEF = [
       { id: "f7jZoHs3QfY", title: "Funky city pop & Braziliaanse klassiekers (vinyl)", channel: "Bobby Ghanoush", mins: 73, inMoods: true },
       { id: "WCCovrKvAtU", title: "80s Japanese city pop playlist", channel: "rainbeary", mins: 61, inMoods: true },
       { id: "PLgf-8GQFjABq2XqYIaYD4C_uIZ4jLL4x-", title: "City pop (Japanese 80s)", channel: "playlist", tracks: 44, inMoods: true }
+    ]
+  },
+
+  // ---------- voorstellen voor nieuwe moods ----------
+  {
+    mood: "remix",
+    name: "Remix",
+    subtitle: "Bekende nummers, sneller en harder",
+    style: {
+      bg: "#FF5A1F", fg: "#1A0B05", tag: "#FF5A1F",
+      font: "'Anton', Impact, sans-serif", weight: 400, italic: false,
+      word: "REMIX", deco: "bpm"
+    },
+    question: "Welk tempo: house en tech house, techno, of echt hard (hardstyle, drum & bass)? Hits van nu of klassiekers uit de 90s en 2000s?",
+    candidates: [
+      { id: "56l3OrgK-SU", title: "Tech house remixes & mashups of popular songs", channel: "Darley Jefferson", mins: 96 },
+      { id: "r9P08bbllno", title: "Party mix – remixes & mashups of popular songs", channel: "TOBI", mins: 76 },
+      { id: "YsmcZQAHLyI", title: "90s & 2000s classics reborn – modern remix mix", channel: "Mixterious", mins: 84 },
+      { id: "hctq5FQtp_s", title: "Afro house EDM remixes – Avicii, Swedish House Mafia, Mau P", channel: "DJ NEXYS", mins: 36 },
+      { id: "JA86AFp0gbI", title: "Techno remixes of popular songs – only techno bangers", channel: "BrutishHeavyMusic", mins: 73 },
+      { id: "gIWjzcD_flU", title: "Techno remixes & mashups of popular songs", channel: "Darley Jefferson", mins: 136 },
+      { id: "uPAOIsIT1MA", title: "Drum & bass remixes of popular songs", channel: "PAIGE67", mins: 59 },
+      { id: "BofXJY3WUDs", title: "Hardstyle remixes of popular songs – 2 uur", channel: "Tezpa In The Mix!", mins: 126 }
     ]
   }
 ];
