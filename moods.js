@@ -42,7 +42,14 @@ window.MOODS = [
     sources: [
       { url: "https://www.youtube.com/playlist?list=PL4G14zsHQYcUAsIcKaxxVZEPiat7JA6Cp", title: "90s underground & classic hip hop (playlist)" },
       { url: "https://www.youtube.com/watch?v=_JZom_gVfuw&list=RD_JZom_gVfuw", title: "Mix op basis van Juicy" },
-      { url: "https://www.youtube.com/playlist?list=PL760D537A970662F3", title: "Boom Bap 90's Rap (playlist)" }
+      { url: "https://www.youtube.com/playlist?list=PL760D537A970662F3", title: "Boom Bap 90's Rap (playlist)" },
+      { url: "https://www.youtube.com/watch?v=PRh_SgOQiOo", title: "90s NY rap, boom bap – vinylsessie DJ Zen" },
+      { url: "https://www.youtube.com/watch?v=kYbw-Xqvau0", title: "Full vinyl: 90s hiphop, underrated gems to classics" },
+      { url: "https://www.youtube.com/watch?v=HinlidkA6_M", title: "1994 oldschool hiphop, golden era" },
+      { url: "https://www.youtube.com/watch?v=Gvg-54eEBEY", title: "90s Golden Era hiphop mix" },
+      { url: "https://www.youtube.com/watch?v=PVY5I0k3JBg", title: "90s Golden Era mix, West & East Coast" },
+      { url: "https://www.youtube.com/watch?v=owx8DPgNtwI", title: "Krafty Kuts – Golden Era of Hip Hop (deel 1–3)" },
+      { url: "https://www.youtube.com/playlist?list=PLxA687tYuMWgEVasBziZoZ1Bk7JLnu-Rf", title: "90s Hip Hop – de grootste rap-hits (playlist)" }
     ]
   },
   {
@@ -104,7 +111,12 @@ window.MOODS = [
     sources: [
       { url: "https://www.youtube.com/watch?v=djV11Xbc914&list=RDdjV11Xbc914", title: "Mix op basis van Take On Me" },
       { url: "https://www.youtube.com/watch?v=fNFzfwLM72c&list=RDfNFzfwLM72c", title: "Mix op basis van Stayin' Alive" },
-      { url: "https://www.youtube.com/watch?v=4xDzrJKXOOY", title: "synthwave radio" }
+      { url: "https://www.youtube.com/watch?v=4xDzrJKXOOY", title: "synthwave radio" },
+      { url: "https://www.youtube.com/watch?v=X4LLM0_iJ4o", title: "Disco house megamix – Chic, Donna Summer, Madonna" },
+      { url: "https://www.youtube.com/watch?v=NazkWPC6mCk", title: "Pierre J – Italo disco mix 1982–1984" },
+      { url: "https://www.youtube.com/watch?v=kRXDdOlWX80", title: "Italo disco rarities, vinyl-only DJ-set" },
+      { url: "https://www.youtube.com/watch?v=IoTdm31BIrk", title: "Best of 80s synthpop – New Order, Human League, Alphaville" },
+      { url: "https://www.youtube.com/watch?v=nsEtDnglaMU", title: "80s party hits megamix – Wham!, a-ha, Duran Duran" }
     ]
   },
   {
@@ -123,9 +135,31 @@ window.MOODS = [
       deco: "cloud"
     },
     sources: [
-      { url: "https://www.youtube.com/watch?v=sxC3Fg98AKE", title: "music to make your brain shut up" },
-      { url: "https://www.youtube.com/watch?v=pZ6V8pH4HPY", title: "Brian Eno – Thursday Afternoon" },
-      { url: "https://www.youtube.com/watch?v=lTRiuFIWV54", title: "Lofi Girl – 1 A.M Study Session" }
+      { url: "https://www.youtube.com/watch?v=wpAdzrCZgus", title: "no thoughts, head empty" }
+    ]
+  },
+  {
+    id: "city-pop",
+    name: "City pop",
+    subtitle: "Tokio 1983, neon en funk",
+    featured: true,
+    style: {
+      bg: "#FFE1CC",
+      fg: "#2E3192",
+      tag: "#FFB38A",
+      font: "'Fraunces', Georgia, serif",
+      weight: 700,
+      italic: false,
+      word: "シティポップ",
+      deco: "sun"
+    },
+    sources: [
+      { url: "https://www.youtube.com/watch?v=_IXVNO5t2zQ", title: "70s–80s Japanese city pop, chill & mellow mix" },
+      { url: "https://www.youtube.com/watch?v=gnpZF8R2FDw", title: "Japanese rare groove, jazz, funk, city pop (vinyl)" },
+      { url: "https://www.youtube.com/watch?v=OIvGy0wM5_s", title: "Smooth city pop, nostalgic funk, R&B (vinylsessie)" },
+      { url: "https://www.youtube.com/watch?v=f7jZoHs3QfY", title: "Funky city pop & Braziliaanse klassiekers (vinyl)" },
+      { url: "https://www.youtube.com/watch?v=WCCovrKvAtU", title: "80s Japanese city pop playlist" },
+      { url: "https://www.youtube.com/playlist?list=PLgf-8GQFjABq2XqYIaYD4C_uIZ4jLL4x-", title: "City pop (Japanese 80s) (playlist)" }
     ]
   },
 
